@@ -6,21 +6,31 @@ export default class Feedback extends Component {
     neutral: 0,
     bad: 0,
   }
-  render() {
+    leaveFeedback = (feedback) => {
+        this.setState((prevState) => {
+            const value = prevState[feedback];
+            return {
+              [feedback]: value + 1  
+            }
+        })
+    }
+    
+    render() {
+        const { good, neutral, bad } = this.state;
     return (
       <div>
         <div>
           <p>Please leave feedback</p>
-          <button type="button">Good</button>
-          <button type="button">Neutral</button>
-          <button type="button">Bad</button>
+          <button type="button" onClick={() => this.leaveFeedback("good")}>Good</button>
+          <button type="button" onClick={() => this.leaveFeedback("neutral")}>Neutral</button>
+          <button type="button" onClick={() => this.leaveFeedback("bad")}>Bad</button>
         </div>
         <div>
           <p>Statistics</p>
           <ul>
-            <li>Good: </li>
-            <li>Neuttral: </li>
-            <li>Bad: </li>
+            <li>Good: {good} </li>
+            <li>Neuttral: {neutral} </li>
+            <li>Bad: {bad} </li>
           </ul>
         </div>
       </div>
