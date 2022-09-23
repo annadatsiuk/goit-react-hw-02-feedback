@@ -1,0 +1,15 @@
+.feedback__list {
+    list-style: none;
+}
+.feedback_list__item {
+    font-family: 'Lucida Grande', sans-serif;
+    font-size: 17px;
+    color: rgb(86, 86, 86);
+}
+.feedback_list__item:not(:last-child) {
+    margin-bottom: 8px;
+}
+.statistic_item__data {
+    color: rgb(235, 98, 24);
+    font-weight: 700;
+}

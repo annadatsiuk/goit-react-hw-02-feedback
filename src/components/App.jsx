@@ -1,6 +1,9 @@
 import Feedback from "./Feedback/Feedback";
+
 export const App = () => {
   return (
-    <Feedback />
+    <div>
+      <Feedback />
+    </div>
   );
 };

@@ -1,0 +1,23 @@
+.feedbackBtnsWrap {}
+
+.feedback__btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+
+    font-family: 'Lucida Grande', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(235, 98, 24);
+}
+.feedback__btn:not(:last-child){
+    margin-right: 15px;
+}
+.feedback__btn:hover {
+    background-color: white;
+    color: rgb(235, 98, 24);
+    border: 1px solid rgb(235, 98, 24);
+}
